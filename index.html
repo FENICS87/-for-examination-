@@ -1,0 +1,32 @@
+<!doctype html>
+<script src="https://ru.js.cx/test/libs.js"></script>
+<script src="test.js"></script>
+<script>
+
+  function makeBuffer() { 
+   let buffer ="";
+   function loadBuffer(arg=""){
+   //console.log(arg);
+     return buffer+=arg;
+    
+     }
+     loadBuffer.clear = function(){
+       buffer='';  
+     }
+     return loadBuffer;
+     
+  }
+
+
+
+
+var buffer = makeBuffer();
+//console.log(buffer.clear);
+console.log(buffer("Тест"));
+console.log(buffer(" тебя не съест "));
+
+/*console.log( buffer() ); // Тест тебя не съест
+console.log( buffer.clea() );*/
+</script>
+
+</html>
